@@ -25,7 +25,7 @@ func main() {
 	}
 }
 
-func worker(id int, work chan int, results chan int) {
+func worker(id int, work <-chan int, results chan<- int) {
 	for {
 		fmt.Printf("(worker %d) Waiting....\n", id)
 
